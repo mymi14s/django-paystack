@@ -1,0 +1,4 @@
+certifi 
+django>=2.2
+pytz==2019.1
+requests==2.22.0
