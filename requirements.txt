@@ -1,4 +1,4 @@
-certifi 
-django>=2.2
+certifi==2019.6.16
+django>=2.0
 pytz==2019.1
 requests==2.22.0
