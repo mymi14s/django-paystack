@@ -142,22 +142,22 @@ $ python manage.py runserver
 
 ```
 
-![alt text](./pics/paypage.png)
+![alt text](./photo/paypage.png)
 
 
-![alt text](./pics/paystack.png)
+![alt text](./photo/paystack.png)
 
 
-![alt text](./pics/paystacksuccess.png)
+![alt text](./photo/paystacksuccess.png)
 
 
-![alt text](./pics/paymentsuccess.png)
+![alt text](./photo/paymentsuccess.png)
 
 
-![alt text](./pics/adminhistorylisting.png)
+![alt text](./photo/adminhistorylisting.png)
 
 
-![alt text](./pics/adminhistorydetail.png)
+![alt text](./photo/adminhistorydetail.png)
 
 
 ## Extending
