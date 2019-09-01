@@ -27,6 +27,7 @@ urlpatterns = [
     path("paystack/", include('paystack.urls')),
 ]
 ```
+  migrate model, django comes with a model that stores email, reference, data i.e json_data
 
 4. Login to [Paystack settings Dashboard](https://dashboard.paystack.com/#/settings/developer) and fetch your `PUBLIC_KEY` and `SECRET_KEY`. paste these keys in your `settings.py`
 
@@ -38,7 +39,7 @@ PAYSTACK_SECRET_KEY=******
 PAYSTACK_SUCCESS_URL='your success url'
 PAYSTACK_FAILED_URL='your failed url'
 ```
-  migrate model, django comes with a model that stores email, reference, data i.e json_data
+
 
 ```
 python manage.py migrate
@@ -61,7 +62,7 @@ python manage.py migrate
 6. A `signal` is provided with the verified  reference as well as the amount
 
 ```
-from hubspot.signals import payment_verified
+from paystack.signals import payment_verified
 
 from django.dispatch import receiver
 

@@ -14,7 +14,9 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+MEDIA_DIR = os.path.join(BASE_DIR, 'media')
+STATIC_DIR = os.path.join(BASE_DIR, 'static')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
@@ -38,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'paystack',
+    'store',
 ]
 
 MIDDLEWARE = [
@@ -55,7 +58,7 @@ ROOT_URLCONF = 'django_paystack.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATES_DIR,],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -118,4 +121,18 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
+
+MEDIA_ROOT = MEDIA_DIR
+MEDIA_URL = '/media/'
+
 STATIC_URL = '/static/'
+# STATIC_ROOT = STATIC_DIR
+STATICFILES_DIRS = [
+    STATIC_DIR,
+]
+
+# PAYSTACK settings
+PAYSTACK_PUBLIC_KEY='pk_test_fe8c537bcef63d740f8eba2f4c755117dbd02efe'
+PAYSTACK_SECRET_KEY='sk_test_b3a97b7569eef6fbb014ec46f9c59956b2d79d07'
+PAYSTACK_SUCCESS_URL='store:paysuccess'
+# PAYSTACK_FAILED_URL='your failed

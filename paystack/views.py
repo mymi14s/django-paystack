@@ -92,6 +92,7 @@ def update_payment(json_body):
     ndata = json_body['data']
     reference = ndata['reference']
     email = ndata['customer']['email']
+    payment_date = ndata['paid_at']
     if event == 'charge.success':
         # status = 'paid'
         # payment_date = ndata['paid_at']
@@ -103,6 +104,8 @@ def update_payment(json_body):
             email=email,
             reference=reference, data=json_body
         )
+
+
         payment_state.p_event = event
         payment_state.p_payment_date = payment_date
         payment_state.p_reference = reference
@@ -147,9 +150,15 @@ def webhook_endpoint(request):
             # print(request.META)
 
             update_payment(json_body) #
+            payload = json_body
+            signals.event_signal.send(
+                sender=request, event=payload['event'], data=payload['data'])
             return HttpResponse(status=200)
     # Not successful
     update_payment(json_body)
+    payload = json_body
+    signals.event_signal.send(
+        sender=request, event=payload['event'], data=payload['data'])
     # print('failed\n', json_body)
     return HttpResponse(status=400) #non 200
 
