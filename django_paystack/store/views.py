@@ -19,7 +19,7 @@ class PaymentSuccess(TemplateView):
 
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(**kwargs)
-        state = [payment_state.p_event, payment_state.p_payment_date, payment_state.p_reference, payment_state.p_email, payment_state.p_json_body]
+        state = [{'event':payment_state.p_event}, payment_state.p_payment_date, payment_state.p_reference, payment_state.p_email, payment_state.p_json_body]
         context['paystate'] = state
         # print(payment_state.p_event, payment_state.p_payment_date, payment_state.p_reference, payment_state.p_email, payment_state.p_json_body)
         return context

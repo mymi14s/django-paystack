@@ -1,8 +1,8 @@
 ## Django Paystack
 
+## <a href="https://www.ghorz.com">Ghorz.com</a>
 
-
-This is a reusable django >= 2 library that makes it very easy to hook up [Paystack]() purchase button to your site/app. It helps with the verification of the transaction and is highly conifgurable. This work was derived from <a href="https://github.com/gbozee/django-paystack">Gbozee Django Paystack</a> with some modification.
+This is a reusable django >= 2 library that makes it very easy to hook up Paystack purchase button to your site/app. It helps with the verification of the transaction and is highly conifgurable. This work was derived from <a href="https://github.com/gbozee/django-paystack">Gbozee Django Paystack</a> with some modification.
 
 Usage:
 
@@ -44,11 +44,6 @@ PAYSTACK_FAILED_URL='your failed url'
 ```
 python manage.py migrate
 ```
-  There is a default success and failed url but it is better you use a custom url
-  e.g below. You can adapt the below custom redirect view in your code
-```
-
-```
 
 5. In the html where you want to insert the payment button
 
@@ -74,6 +69,7 @@ def on_payment_verified(sender, ref,amount, **kwargs):
     """
     pass
 ```
+
 7. If you can't use the signal, you can use the values provided by the webhook in your
    custom payment processor or view.
 
@@ -146,13 +142,23 @@ $ python manage.py runserver
 
 ```
 
-![alt text](./docs/home_page.PNG)
+![alt text](./pics/paypage.png)
 
 
-![alt text](./docs/page2.PNG)
+![alt text](./pics/paystack.png)
 
 
-![alt text](./docs/page3.PNG)
+![alt text](./pics/paystacksuccess.png)
+
+
+![alt text](./pics/paymentsuccess.png)
+
+
+![alt text](./pics/adminhistorylisting.png)
+
+
+![alt text](./pics/adminhistorydetail.png)
+
 
 ## Extending
 The default templates used can be extended to include your custom content.
