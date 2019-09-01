@@ -132,7 +132,7 @@ STATICFILES_DIRS = [
 ]
 
 # PAYSTACK settings
-PAYSTACK_PUBLIC_KEY='pk_test_fe8c537bcef63d740f8eba2f4c755117dbd02efe'
-PAYSTACK_SECRET_KEY='sk_test_b3a97b7569eef6fbb014ec46f9c59956b2d79d07'
+PAYSTACK_PUBLIC_KEY='your public key'
+PAYSTACK_SECRET_KEY='your secret key'
 PAYSTACK_SUCCESS_URL='store:paysuccess'
 # PAYSTACK_FAILED_URL='your failed

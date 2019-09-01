@@ -200,7 +200,7 @@ for example, assuming you are using ngrok during development, in your `settings.
 PAYSTACK_WEBHOOK_DOMAIN=13232323.ngrok.io
 ```
 
-and your webhook url that you would paste at paystack dashboard would be
+and your webhook url that you would paste at paystack dashboard would be like:
 http://g56hju9uj.ngrok.io/paystack/webhook/
 
 Check out my blog for more django tutorials, codes and snippets https://www.ghorz.com
