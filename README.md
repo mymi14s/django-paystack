@@ -2,7 +2,7 @@
 
 ## <a href="https://www.ghorz.com">Ghorz.com</a>
 
-This is a reusable django >= 2 library that makes it very easy to hook up Paystack purchase button to your site/app. It helps with the verification of the transaction and is highly conifgurable. This work was derived from <a href="https://github.com/gbozee/django-paystack">Gbozee Django Paystack</a> with some modification.
+This is a reusable django >= 2 library that makes it very easy to hook up Paystack purchase button to your site/app. It helps with the verification of the transaction and is highly conifgurable. This work was derived from <a href="https://github.com/gbozee/django-paystack">Gbozee Django Paystack</a> with extended features and modification.
 
 Usage:
 
@@ -29,6 +29,10 @@ urlpatterns = [
 ```
   migrate model, django comes with a model that stores email, reference, data i.e json_data
 
+  ```
+  python manage.py migrate
+  ```
+
 4. Login to [Paystack settings Dashboard](https://dashboard.paystack.com/#/settings/developer) and fetch your `PUBLIC_KEY` and `SECRET_KEY`. paste these keys in your `settings.py`
 
 ```
@@ -41,9 +45,6 @@ PAYSTACK_FAILED_URL='your failed url'
 ```
 
 
-```
-python manage.py migrate
-```
 
 5. In the html where you want to insert the payment button
 
