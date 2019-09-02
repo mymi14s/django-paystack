@@ -142,6 +142,7 @@ $ cd django_paystack
 $ python manage.py runserver
 
 ```
+## Default admin login. usernam: admin , password: admin
 
 ![alt text](./photo/paypage.png)
 
