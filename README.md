@@ -10,6 +10,13 @@ Usage:
 ```
 pip install -e git+https://github.com/mymi14s/django-paystack.git@master#egg=paystack
 ```
+Additional if not installed:
+    certifi==2019.6.16
+    django>=2.0
+    pytz==2019.1
+    requests==2.22.0
+    django-jsonfield==1.2.0
+
 
 2. Add `paystack` to your `settings` module
 ```
